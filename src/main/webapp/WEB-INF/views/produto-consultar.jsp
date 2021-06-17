@@ -35,15 +35,24 @@ select.error { /* formatar os campos com erro do jquery validate */
 			<div class="collapse navbar-collapse" id="navbarNavDropdown ">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="/exercicioMVC01/">Home</a></li>
+						aria-current="page" href="/exercicioMVC01/home">Home</a></li>
 
 					<li class="nav-item"><a class="nav-link"
 						href="/exercicioMVC01/produto-consultar">Consutar</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/exercicioMVC01/produto-cadastrar">Cadastrar produto</a></li>	
-					
+						href="/exercicioMVC01/produto-cadastrar">Cadastrar produto</a></li>
+
 				</ul>
+				
 			</div>
+			<form class="d-flex">
+					<span class="text-white mt-3" style="margin-right: 20px;">
+						${usuario_autenticado.nome} (${usuario_autenticado.email}) </span> <a
+						href="/projetoSpringMVC01/logout"
+						class="btn btn-outline-secondary mt-2"
+						onclick="return confirm('Deseja realmente sair do sistema?')">
+						Sair do Sistema </a>
+				</form>
 		</div>
 	</nav>
 	<div class="nav-scroller bg-body shadow-sm">

@@ -21,30 +21,48 @@
 			<div class="collapse navbar-collapse" id="navbarNavDropdown ">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="/exercicioMVC01/">Home</a></li>
+						aria-current="page" href="/exercicioMVC01/home">Home</a></li>
 
 					<li class="nav-item"><a class="nav-link"
 						href="/exercicioMVC01/produto-consultar">Consutar</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/exercicioMVC01/produto-cadastrar">Cadastrar produto</a></li>	
-					
+						href="/exercicioMVC01/produto-cadastrar">Cadastrar produto</a></li>
+
 				</ul>
+				
 			</div>
+			<form class="d-flex">
+					<span class="text-white mt-3" style="margin-right: 20px;">
+						${usuario_autenticado.nome} (${usuario_autenticado.email}) </span> <a
+						href="/projetoSpringMVC01/logout"
+						class="btn btn-outline-secondary mt-2"
+						onclick="return confirm('Deseja realmente sair do sistema?')">
+						Sair do Sistema </a>
+				</form>
 		</div>
 	</nav>
 	<div class="nav-scroller bg-body shadow-sm">
 		<nav class="nav nav-underline">
-			<p class="mt-3 ml-4">&nbsp;&nbsp;&nbsp;Exercício 01 Web - Sistema
-				desenvolvido em Spring MVC com Spring JDBC, Bootstrap e JQuery</p>
+			<p class="mt-3 ml-4">&nbsp;&nbsp;&nbsp;Sistema desenvolvido em
+				Spring MVC com Spring JDBC, Bootstrap e JQuery</p>
 		</nav>
 	</div>
-	<div class="container mt-4">
-		<h3>Seja bem vindo ao Exercício 01 Web!</h3>
-	</div>
+
 
 
 	<!-- Referencia para arquivos JS -->
 	<script src="resources/js/bootstrap.min.js"></script>
+
+	<!-- Referencia do JQuery -->
+	<script src="resources/js/jquery-3.6.0.min.js"></script>
+
+	<!-- Referencia dos arquivos do Highcharts -->
+	<script src="resources/js/highcharts.js"></script>
+	<script src="resources/js/highcharts-3d.js"></script>
+	<script src="resources/js/exporting.js"></script>
+	<script src="resources/js/export-data.js"></script>
+
+	
 
 </body>
 </html>

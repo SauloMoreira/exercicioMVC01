@@ -43,7 +43,7 @@ textarea.error { /* formatar os campos com erro do jquery validate */
 			<div class="collapse navbar-collapse" id="navbarNavDropdown ">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="/exercicioMVC01/">Home</a></li>
+						aria-current="page" href="/exercicioMVC01/home">Home</a></li>
 
 					<li class="nav-item"><a class="nav-link"
 						href="/exercicioMVC01/produto-consultar">Consutar</a></li>
@@ -51,7 +51,16 @@ textarea.error { /* formatar os campos com erro do jquery validate */
 						href="/exercicioMVC01/produto-cadastrar">Cadastrar produto</a></li>
 
 				</ul>
+				
 			</div>
+			<form class="d-flex">
+					<span class="text-white mt-3" style="margin-right: 20px;">
+						${usuario_autenticado.nome} (${usuario_autenticado.email}) </span> <a
+						href="/projetoSpringMVC01/logout"
+						class="btn btn-outline-secondary mt-2"
+						onclick="return confirm('Deseja realmente sair do sistema?')">
+						Sair do Sistema </a>
+				</form>
 		</div>
 	</nav>
 	<div class="nav-scroller bg-body shadow-sm">
@@ -86,18 +95,21 @@ textarea.error { /* formatar os campos com erro do jquery validate */
 			<div class="col-md-4">
 				<div class="row">
 					<label>Nome do Produto:</label>
-					<form:input path="dto.nomeProduto" id="nomeProduto" name="nomeProduto"
-						type="text" class="form-control" placeholder="Ex: produto xyz" />
+					<form:input path="dto.nomeProduto" id="nomeProduto"
+						name="nomeProduto" type="text" class="form-control"
+						placeholder="Ex: produto xyz" />
 					<br /> <label>Quantidade:</label>
 					<form:input path="dto.quantidadeProduto" id="quantidadeProduto"
 						name="quantidadeProduto" type="text" class="form-control"
 						placeholder="Ex: 30" />
 					<br /> <label>Preço:</label>
-					<form:input path="dto.precoProduto" id="precoProduto" name="precoProduto"
-						type="text" class="form-control" placeholder="Ex: 30,00" />
+					<form:input path="dto.precoProduto" id="precoProduto"
+						name="precoProduto" type="text" class="form-control"
+						placeholder="Ex: 30,00" />
 					<br /> <label>Descrição:</label>
 					<form:textarea path="dto.descricaoProduto" id="descricaoProduto"
-						name="descricaoProduto" class="form-control" aria-label="Descrição:"
+						name="descricaoProduto" class="form-control"
+						aria-label="Descrição:"
 						placeholder="Ex: produto contém xyz e faz abc"></form:textarea>
 					<br />
 				</div>
@@ -119,13 +131,13 @@ textarea.error { /* formatar os campos com erro do jquery validate */
 	</div>
 	<!-- Referencia para arquivos JS -->
 	<script src="resources/js/bootstrap.min.js"></script>
-	
+
 	<!-- Referencia para o JQuery -->
 	<script src="resources/js/jquery-3.6.0.min.js"></script>
-	
+
 	<!-- Referencia para o JQuery Masked Input -->
-	<script src="resources/js/jquery.maskedinput.min.js"></script>	
-	
+	<script src="resources/js/jquery.maskedinput.min.js"></script>
+
 	<!-- Referencias para o JQuery validate -->
 	<script src="resources/js/jquery.validate.min.js"></script>
 	<script src="resources/js/messages_pt_BR.min.js"></script>

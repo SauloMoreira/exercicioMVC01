@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import br.com.cotiinformatica.repositories.ProdutoRepository;
+import br.com.cotiinformatica.repositories.UsuarioRepository;
 
 @Configuration
 @ComponentScan(basePackages="br.com.cotiinformatica")
@@ -47,6 +48,12 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	public ProdutoRepository getProdutoRepository() {
 		return new ProdutoRepository(getDataSource());
 	}
-	
+	/*
+	* Configurando a classe UsuarioRepository
+	*/
+	@Bean
+	public UsuarioRepository getUsuarioRepository() {
+	return new UsuarioRepository(getDataSource());
+	}
 	
 }
